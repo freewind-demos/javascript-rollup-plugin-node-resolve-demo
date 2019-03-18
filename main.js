@@ -1,3 +1,7 @@
-import hello from './hello'
+import {toUpper} from 'javascript-rollup-plugin-node-resolve-demo--to-upper'
 
-hello('rollup')
+function hello(name) {
+  return 'Hello, ' + toUpper(name);
+}
+
+document.getElementById('main').innerText = hello('rollup')

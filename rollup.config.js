@@ -1,6 +1,12 @@
+import resovle from 'rollup-plugin-node-resolve';
+
 export default {
-    entry: 'main.js',
-    dest: 'bundle.js',
-    format: 'cjs',
-    external: ['lodash']
+  input: 'main.js',
+  output: {
+    file: 'dist/bundle.js',
+    format: 'cjs'
+  },
+  plugins: [
+    resovle()
+  ]
 }
